@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+Bash script that displays numbers from 1 to 20 and:
+display 4 and after that bad luck from china
+display 9 and after that bad luck from japan
+display 17 and after that bad luck from italy
+
+counter=1
+while [ $counter -le 20 ]
+do
+if [ $counter == 5 ]; then
+	echo "bad luck from China"
+	echo "$counter"
+elif [ $counter == 10 ]; then
+	echo "bad luck from Japan"
+	echo "$counter"
+elif [ $counter == 18 ]; then
+	echo "bad luck from Italy"
+	echo "$counter"
+else
+	echo "$counter"
+fi
+((counter++))
+done
