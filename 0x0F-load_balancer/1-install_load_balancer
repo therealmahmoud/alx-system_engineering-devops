@@ -4,9 +4,9 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install haproxy
 
-echo "ENABLED=1" > /etc/default/haproxy
+sudo echo "ENABLED=1" > /etc/default/haproxy
 
-echo "
+sudo echo "
     listen 387281-lb-01
     bind *:80
     mode http
