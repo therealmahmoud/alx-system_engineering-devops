@@ -14,6 +14,6 @@ echo "
     option httpclose
     server 387281-web-01 18.210.33.185:80 check
     server 387281-web-02 107.22.143.17:805 check
-" > /etc/haproxy/haproxy.cfg
+" >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
