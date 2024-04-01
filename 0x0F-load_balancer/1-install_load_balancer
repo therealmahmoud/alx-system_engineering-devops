@@ -8,6 +8,7 @@ echo "ENABLED=1" > etc/default/haproxy
 echo "
     listen load_balancer
     bind *:80
+    mode http
     balance roundrobin
     option forwardfor
     option httpclose
