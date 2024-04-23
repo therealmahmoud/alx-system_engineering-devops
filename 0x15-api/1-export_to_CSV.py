@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     p = f"{sys.argv[1]}.csv"
     with open(p, "w") as csv_file:
-        writer = csv.writer(csv_file)
+        writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
         for i in todoo:
             writer.writerow([sys.argv[1],
                              user['username'], i['completed'], i['title']])
