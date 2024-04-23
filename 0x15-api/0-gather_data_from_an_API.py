@@ -7,9 +7,10 @@ import sys
 
 if __name__ == '__main__':
     todo = requests.get(f'https://jsonplaceholder.typicode.com/users/\
-    {sys.argv[1]}/todos')
+{sys.argv[1]}/todos')
     users = requests.get(f'https://jsonplaceholder.typicode.com/users/\
-    {sys.argv[1]}')
+{sys.argv[1]}')
+    
     todoo = todo.json()
     user = users.json()
 
