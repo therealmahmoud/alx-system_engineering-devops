@@ -4,20 +4,22 @@ returns information about his/her TOdO list progress."""
 import requests
 import sys
 
-todo = requests.get(f'https://jsonplaceholder.typicode.com/users/\
-{sys.argv[1]}/todos')
-users = requests.get(f'https://jsonplaceholder.typicode.com/users/\
-{sys.argv[1]}')
-todoo = todo.json()
-user = users.json()
 
-p = 0
-for i in todoo:
-    if i['completed'] is True:
-        p = p + 1
+if __name__ == '__main__':
+    todo = requests.get(f'https://jsonplaceholder.typicode.com/users/\
+    {sys.argv[1]}/todos')
+    users = requests.get(f'https://jsonplaceholder.typicode.com/users/\
+    {sys.argv[1]}')
+    todoo = todo.json()
+    user = users.json()
 
-print(f"Employee {user['name']} is done with tasks({p}/{len(todoo)}):")
+    p = 0
+    for i in todoo:
+        if i['completed'] is True:
+            p = p + 1
 
-for j in todoo:
-    if j['completed'] is True:
-        print(f"\t {j['title']}")
+    print(f"Employee {user['name']} is done with tasks({p}/{len(todoo)}):")
+
+    for j in todoo:
+        if j['completed'] is True:
+            print(f"\t {j['title']}")
