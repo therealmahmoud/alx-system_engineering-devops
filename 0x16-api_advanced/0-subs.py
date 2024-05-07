@@ -13,7 +13,7 @@ def number_of_subscribers(subreddit):
         'User-Agent': 'Mahmoud/0.1'
         }
     response = requests.get(url, headers=headers, allow_redirects=False)
-    if response.status_code != 404:
+    if response.status_code != 200:
         return 0
     data = response.json()
     subscribers = data['data']['subscribers']
