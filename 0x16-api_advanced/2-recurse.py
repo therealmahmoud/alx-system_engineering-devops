@@ -19,11 +19,11 @@ def recurse(subreddit, hot_list=[]):
     if response.status_code != 200:
         print("None")
         return
-    data = response.json()['data']['after']
-    if data is not None:
-        after = data
+    data1 = response.json().get('data').get('after')
+    if data1 is not None:
+        after = data1
         recurse(subreddit, hot_list)
-    data1 = response.json()['data']['children']
-    for i in data1:
-        hot_list.append(i['data']['title'])
+    data = response.json()['data']['children']
+    for child in data:
+        hot_list.append(child['data']['title'])
     return hot_list
