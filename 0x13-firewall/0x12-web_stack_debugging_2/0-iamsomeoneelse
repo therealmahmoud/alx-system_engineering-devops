@@ -1,3 +1,0 @@
-#!/use/bin/env bash
-# Bash script that accepts one argument.
-sudo -u "$1" whoami
