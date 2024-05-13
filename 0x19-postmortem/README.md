@@ -1,4 +1,4 @@
-0. My first postmortem
+**0-My first postmortem**
 Issue Summary:
 Duration: May 12, 2024, 10:00 AM - May 12, 2024, 12:00 PM (UTC)
 Impact: The Apache service running in the container failed to return the expected page, affecting all users attempting to access the service. Approximately 100% of users were affected.
@@ -45,8 +45,7 @@ Implement automated testing procedures to verify service functionality prior to 
 
 
 
-
-1. Make people want to read your postmortem
+**1. Make people want to read your postmortem**
 Issue Summary:
 Duration: May 12, 2024, 10:00 AM - May 12, 2024, 12:00 PM (UTC)
 Impact: The Apache service decided it needed a siesta, failing to serve the expected page and leaving users scratching their heads. Approximately 100% of users were affected, leading to a surge in confused emojis.
